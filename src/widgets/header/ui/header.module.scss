@@ -1,0 +1,41 @@
+.header {
+	padding-top: 41px;
+	padding-bottom: 75px;
+}
+.wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 22px;
+	nav {
+		margin-bottom: 3px;
+	}
+}
+
+.sticks {
+	margin-right: 285px;
+	span {
+		width: 40px;
+		height: 2px;
+		background-color: #000;
+		margin-bottom: 4px;
+		display: block;
+	}
+}
+
+.nav_list {
+	display: flex;
+	gap: 23px;
+	li {
+		font-size: 15px;
+		font-weight: 600;
+	}
+}
+.more_links {
+	display: flex;
+	gap: 32px;
+	align-items: center;
+	img {
+		display: block;
+	}
+}
