@@ -1,0 +1,83 @@
+@use 'shared/styles/variables.scss' as *;
+
+.circle {
+	position: absolute;
+	background-color: $blue-color;
+
+	z-index: 4;
+	width: 8px;
+	height: 8px;
+	top: 6px;
+	left: 6px;
+	border-radius: 50%;
+
+	&.active {
+		background-color: $white;
+	}
+}
+
+.dot {
+	position: absolute;
+
+	border-radius: 50%;
+	background-color: $white;
+	width: 20px;
+	height: 20px;
+
+	&_active {
+		background-color: $blue-color;
+	}
+	&_content {
+		background-color: $black;
+		visibility: hidden;
+		color: $white;
+		width: 147px;
+		display: flex;
+		font-size: 13px;
+		align-items: center;
+		justify-content: center;
+		height: 35px;
+
+		position: absolute;
+		top: -43px;
+		left: -54px;
+
+		&_close {
+			visibility: hidden;
+			background-color: $white;
+			color: $black;
+			width: 22px;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			position: absolute;
+			left: 94px;
+			bottom: 40px;
+
+			cursor: pointer;
+		}
+	}
+}
+
+.left {
+	left: 1%;
+	bottom: 34%;
+}
+.top {
+	left: 50%;
+	top: 5%;
+}
+.right {
+	right: 10%;
+	top: 32%;
+}
+
+.bottom {
+	bottom: 30%;
+	left: 47%;
+}
+.active {
+	visibility: visible !important;
+}
