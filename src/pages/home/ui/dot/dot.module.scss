@@ -18,7 +18,7 @@
 
 .dot {
 	position: absolute;
-
+	cursor: pointer;
 	border-radius: 50%;
 	background-color: $white;
 	width: 20px;
@@ -26,6 +26,7 @@
 
 	&_active {
 		background-color: $blue-color;
+		box-shadow: 4px -1px 20px 8px $blue-color;
 	}
 	&_content {
 		background-color: $black;
@@ -63,7 +64,7 @@
 
 .left {
 	left: 1%;
-	bottom: 34%;
+	bottom: 25%;
 }
 .top {
 	left: 50%;
@@ -71,11 +72,11 @@
 }
 .right {
 	right: 10%;
-	top: 32%;
+	top: 36%;
 }
 
 .bottom {
-	bottom: 30%;
+	bottom: 20%;
 	left: 47%;
 }
 .active {

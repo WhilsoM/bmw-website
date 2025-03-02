@@ -6,8 +6,6 @@
 		position: relative;
 
 		&_width {
-			width: 1079px;
-			margin: auto;
 			display: flex;
 			align-items: center;
 			justify-content: space-around;
@@ -26,10 +24,8 @@
 	overflow: hidden;
 }
 .car_img {
-	object-position: bottom;
 	width: 100%;
 	height: auto;
-	clip-path: polygon(0 0, 100% 0, 100% 89%, 0 89%);
 }
 
 .title {

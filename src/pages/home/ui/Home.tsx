@@ -1,8 +1,12 @@
-import bmwCarImg from 'shared/images/bmw.jpg'
+import { useState } from 'react'
+import bmwSedanImg from 'shared/images/bmw-sedan.png'
+import bmwCarImg from 'shared/images/bmw.png'
 import { Dot } from './dot/Dot'
 import s from './home.module.scss'
 
 export const Home = () => {
+	const [isTouring, setIsTouring] = useState(true)
+
 	return (
 		<section role='car_info' className={s.bmw_info}>
 			<div className='container'>
@@ -19,15 +23,29 @@ export const Home = () => {
 							</div>
 
 							<div className={s.buttons}>
-								<button className={s.active}>TOURING</button>
-								<button>SEDAN</button>
+								<button
+									onClick={() => setIsTouring(true)}
+									className={isTouring ? s.active : ''}
+								>
+									TOURING
+								</button>
+								<button
+									onClick={() => setIsTouring(false)}
+									className={!isTouring ? s.active : ''}
+								>
+									SEDAN
+								</button>
 							</div>
 						</div>
 					</div>
 
 					<div className={s.car_info_img}>
 						<div className={s.car_info_wrapper}>
-							<img src={bmwCarImg} alt='car bmw' className={s.car_img} />
+							<img
+								src={isTouring ? bmwCarImg : bmwSedanImg}
+								alt='car bmw'
+								className={s.car_img}
+							/>
 						</div>
 
 						<div className={`${s.dots}`}>
@@ -35,31 +53,6 @@ export const Home = () => {
 							<Dot content='382 HORSEPOWER' pos='top' />
 							<Dot content='382 HORSEPOWER' pos='right' />
 							<Dot content='382 HORSEPOWER' pos='bottom' />
-
-							{/* <div className={`${s.dot} ${s.dot_left}`}>
-								<div className={s.circle}></div>
-
-								<p className={`${s.dot_content}`}>382 HORSEPOWER</p>
-								<p className={s.dot_content_close}>x</p>
-							</div>
-							<div className={`${s.dot}  ${s.dot_top}`}>
-								<div className={s.circle}></div>
-
-								<p className={`${s.dot_content}`}>382 HORSEPOWER</p>
-								<p className={s.dot_content_close}>x</p>
-							</div>
-							<div className={`${s.dot}  ${s.dot_right}`}>
-								<div className={s.circle}></div>
-
-								<p className={`${s.dot_content}`}>382 HORSEPOWER</p>
-								<p className={s.dot_content_close}>x</p>
-							</div>
-							<div className={`${s.dot}  ${s.dot_bottom}`}>
-								<div className={s.circle}></div>
-
-								<p className={`${s.dot_content}`}>382 HORSEPOWER</p>
-								<p className={s.dot_content_close}>x</p>
-							</div> */}
 						</div>
 					</div>
 				</article>

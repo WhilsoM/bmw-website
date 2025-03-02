@@ -2,7 +2,7 @@
 * {
 	box-sizing: border-box;
 }
-#root {
+body {
 	background-color: #e3e3e3;
 }
 .text-blue {
