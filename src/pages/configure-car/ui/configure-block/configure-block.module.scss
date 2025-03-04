@@ -1,0 +1,54 @@
+@use 'shared/styles/variables' as *;
+
+.change_configure_block {
+	width: 200px;
+	height: 100px;
+	margin-bottom: 15px;
+	background-color: $white;
+	border-radius: 10px;
+
+	p {
+		padding: 10px 15px;
+		font-size: 17px;
+		border-bottom: 2px solid $black;
+		display: flex;
+		justify-content: center;
+	}
+
+	button {
+		display: inline-block;
+		padding: 5px 10px;
+		font-size: 15px;
+		cursor: pointer;
+		color: $black;
+		width: 50%;
+		height: 100%;
+		border: 1px solid $black;
+		transition: background-color 0.2s ease-in;
+
+		&:hover {
+			background-color: $blue-color;
+			color: $white;
+		}
+	}
+
+	&_wrapper {
+		height: 53px;
+	}
+}
+
+button.active {
+	background-color: $blue-color;
+	color: $white;
+}
+
+.wheel {
+	background-color: #fff;
+}
+.number_car {
+	background-color: #fff;
+}
+
+.color_car {
+	background-color: #fff;
+}
