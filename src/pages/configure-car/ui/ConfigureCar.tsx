@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { useLocation } from 'shared/hooks/useLocation'
 import { ConfigureBlock } from './configure-block/ConfigureBlock'
 import s from './configure-car.module.scss'
@@ -5,6 +6,9 @@ import s from './configure-car.module.scss'
 export const ConfigureCar = () => {
 	const location = useLocation('/configure-car')
 
+	useEffect(() => {
+		console.log(location)
+	}, [])
 	return (
 		<section className={s.configure_car} role='configure-car page'>
 			<div className='container h-full relative'>
