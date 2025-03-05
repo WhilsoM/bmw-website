@@ -20,7 +20,6 @@ export const ConfigureBlock = ({
 			: position === 'number_car'
 			? s.number_car
 			: s.color_car
-	console.log(conditionPosition)
 
 	return (
 		<div className={`${s.change_configure_block} ${conditionPosition}`}>

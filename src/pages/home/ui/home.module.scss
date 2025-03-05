@@ -9,6 +9,11 @@
 			display: flex;
 			align-items: center;
 			justify-content: space-around;
+
+			@media (max-width: 768px) {
+				flex-direction: column;
+				gap: 30px;
+			}
 		}
 	}
 }
@@ -34,6 +39,14 @@
 	font-size: 131px;
 	font-weight: 600;
 	line-height: 0.87;
+
+	@media (max-width: 768px) {
+		font-size: 100px;
+	}
+
+	@media (max-width: 600px) {
+		font-size: 70px;
+	}
 }
 .bmw_series_three {
 	margin-bottom: 32px;

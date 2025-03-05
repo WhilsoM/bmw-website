@@ -65,6 +65,12 @@
 .left {
 	left: 1%;
 	bottom: 25%;
+
+	@media (max-width: 1338px) {
+		.dot_content {
+			left: -24px;
+		}
+	}
 }
 .top {
 	left: 50%;

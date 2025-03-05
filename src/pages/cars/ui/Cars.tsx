@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { useLocation } from 'react-router'
 const apiKey = 'Ats7XwcFXj9ord7jxU1UtpISF1N_ymFSfPD27klGF_E'
 const query = 'bmw m5 f90'
 
@@ -12,6 +13,13 @@ export const Cars = () => {
 	const [cars, setCars] = useState<TCars[]>([])
 	const [perPage, setPerPage] = useState(6)
 	const [isEmpty, setIsEmpty] = useState(false)
+	const { pathname: location } = useLocation()
+
+	useEffect(() => {
+		if (location === '/cars') {
+			document.body.style.overflow = 'auto'
+		}
+	}, [])
 
 	useEffect(() => {
 		if (perPage > 27) {

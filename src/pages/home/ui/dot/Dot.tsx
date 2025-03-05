@@ -19,12 +19,6 @@ export const Dot = ({ content, pos }: TDot) => {
 			<p className={`${s.dot_content} ${isActive ? s.active : ''}`}>
 				{content}
 			</p>
-			{/* <button
-				onClick={closeInfo}
-				className={`${s.dot_content_close} ${isActive ? s.active : ''}`}
-			>
-				x
-			</button> */}
 		</div>
 	)
 }

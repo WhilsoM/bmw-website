@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useLocation } from 'shared/hooks/useLocation'
 import bmwSedanImg from 'shared/images/bmw-sedan.png'
 import bmwCarImg from 'shared/images/bmw.png'
 import { Dot } from './dot/Dot'
@@ -6,6 +7,8 @@ import s from './home.module.scss'
 
 export const Home = () => {
 	const [isTouring, setIsTouring] = useState(true)
+
+	const location = useLocation('/')
 
 	return (
 		<section role='car_info' className={s.bmw_info}>
